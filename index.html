@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <title>Modelo 3D - Camisas editor</title>
+</head>
+<body>
+    
+
+    <section id="container" class="container text-color-light bg-dark-2">
+
+        <header class="header-editor bg-dark">
+            <div class="logo-marca">
+                <img src="assets/img/LOGOMARCA.png" alt="">
+            </div><!--logomarca-->
+    
+            <div class="select-modelo">
+                
+                <div class="select-modelo__selected">
+                    <span id="model-selected" class="select-modelo__nome"> T-SHIRT OVERSIZED </span>
+                    <span class="select-modelo__box-btn">
+
+                        <div id="button-select" class="select-modelo__btn">
+                            <svg width="15" height="10" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="black" stroke-width="1.5"/>
+                            </svg> 
+                        </div>
+
+                        <div id="menu-select" class="select-modelo__menu">
+                            <ul>
+                                <li>T-shirt padrão</li>
+                                <li>Camiseta Manga longa</li>
+                                <li>T-shirt gola alta</li>
+                            </ul>
+                        </div>
+
+                    </span>
+                </div>
+            </div><!--select-modelo-->
+    
+            <div class="criar-modelo">
+                <svg width="17" height="19" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.82098 16.4118V16.9412H7.30819V18H5.84655V16.4118H6.82098ZM10.4256 16.9412V18H8.86689V16.9412H10.4256ZM13.5439 16.9412V18H11.9852V16.9412H13.5439ZM16.5652 16.4118V18H15.1036V16.9412H15.5908V16.4118H16.5652ZM13.6419 3.17648V5.29412H12.6675V4.2353H3.8977V13.7647H4.87212V14.8235H2.92328V3.17648H13.6419ZM16.5652 13.0244V14.7181H15.5908V13.0244H16.5652ZM6.82097 13.0233V14.717H5.84655V13.0233H6.82097ZM10.7187 0V2.11764H9.74425V1.05883H0.974423V10.5882H1.94885V11.6471H0V0H10.7187ZM16.5652 9.63592V11.3296H15.5908V9.63592H16.5652ZM6.82097 9.63488V11.3286H5.84655V9.63488H6.82097ZM16.5652 6.35294V7.94118H15.5908V7.41177H15.1036V6.35294H16.5652ZM7.30818 6.35294V7.41177H6.82097V7.94118H5.84656V6.35294H7.30818ZM10.4265 6.35294V7.41176H8.86784V6.35294H10.4265ZM13.5449 6.35294V7.41176H11.9862V6.35294H13.5449Z" fill="white"/>
+                </svg>
+                <span class="criar-modelo-text">Salvar modelo</span>
+            </div>
+        </header><!--header-editor-->
+
+        <div class="content">
+            <!--ferramentas--> 
+            <div id="tools" class="content__tools">
+
+                <div id="mouse-default" class="mouse-move clicked">
+                    <svg width="25" height="25" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L12.3971 27L16.0882 16.1324L27 12.3971L2 2Z" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                </div>
+
+                <div id="mark-decal" class="mark-decal">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0498 23.1136C11.9836 23.2117 11.9249 23.2732 11.8685 23.3132C11.8129 23.3527 11.7568 23.3731 11.6923 23.3849C11.6323 23.3958 11.567 23.3991 11.4871 23.403C11.4786 23.4035 11.4699 23.4039 11.461 23.4043C11.3703 23.4089 11.265 23.4154 11.1405 23.4361C10.1224 23.6052 8.27576 24.0883 6.65791 25.4584C5.72099 26.2519 4.39818 26.6006 3.34357 26.0085C2.34356 25.447 2.062 24.1424 2.40645 23.0267C2.95305 21.2564 2.69142 19.669 2.41886 18.7282C2.37936 18.5919 2.33542 18.4757 2.2966 18.373C2.29453 18.3675 2.29248 18.3621 2.29044 18.3567C2.24977 18.249 2.21629 18.1583 2.1976 18.0709C2.17918 17.9848 2.17549 17.9033 2.19446 17.8157C2.21354 17.7276 2.2563 17.6298 2.33549 17.5124C2.5642 17.1736 2.97468 16.8471 3.41904 16.6566C3.86488 16.4656 4.32947 16.4176 4.67412 16.6111L11.8128 20.6173C12.1781 20.8224 12.363 21.2579 12.3917 21.7458C12.4203 22.2326 12.2918 22.755 12.0498 23.1136Z" fill="#404040" stroke="white" stroke-width="0.117188"/>
+                        <path d="M15.5082 0.233266L15.5082 0.233242C15.2976 0.114863 15.0646 0.0585938 14.8342 0.0585938C14.4005 0.0585938 13.9792 0.257701 13.7374 0.615962L5.76771 12.4259C4.8057 13.8515 5.26665 15.7948 6.76646 16.6364L11.4065 19.2402C12.7415 19.9893 14.4278 19.5893 15.2841 18.3205L23.5303 6.10138L15.5082 0.233266ZM15.5082 0.233266L23.1096 4.49873M15.5082 0.233266L23.1096 4.49873M23.1096 4.49873L23.1096 4.49876C23.7134 4.83845 23.8973 5.55497 23.5304 6.10127L23.1096 4.49873ZM8.57214 11.7303C7.57163 13.2127 8.05098 15.2336 9.61071 16.1088L10.6585 16.6966C12.0466 17.4755 13.8001 17.0595 14.6904 15.7402L19.6079 8.45321C20.6083 6.97085 20.129 4.95017 18.5695 4.07499L17.5221 3.48725C16.1341 2.70828 14.3805 3.12414 13.4901 4.4435L8.57214 11.7303Z" fill="#404040" stroke="white" stroke-width="0.117188"/>
+                        <path d="M2.04915 28.5727C1.19922 28.5727 0.678463 27.6407 1.12395 26.9169C1.42948 26.4205 2.07236 26.2536 2.58073 26.5389L3.25022 26.9145C3.70186 27.1679 3.84072 27.753 3.55109 28.1823C3.38642 28.4264 3.11124 28.5727 2.81681 28.5727H2.04915Z" fill="#404040" stroke="white" stroke-width="0.117188"/>
+                        <path d="M6.12371 28.4445H29.5462C29.7701 28.4445 29.9414 28.6082 29.9414 28.7988V29.5862C29.9414 29.7778 29.77 29.9414 29.5462 29.9414H6.12371C5.89986 29.9414 5.72852 29.7777 5.72852 29.5862V28.7988C5.72852 28.6082 5.89982 28.4445 6.12371 28.4445Z" fill="#404040" stroke="white" stroke-width="0.117188"/>
+                    </svg>
+                </div>
+
+                <div id="mouse-move" class="add-image">
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#404040" fill-opacity="1" fill-rule="evenodd" stroke="none" d="M2.026 12.382c-.518-.487-.57-1.308-.118-1.856.435-.527 1.191-.62 1.74-.216l1.347.996 1 .739V4c0-.552.448-1 1-1 .553 0 1 .448 1 1v5h1V2c0-.552.448-1 1-1 .553 0 1 .448 1 1v7h1V3c0-.552.448-1 1-1 .553 0 1 .448 1 1v6h1V6c0-.552.448-1 1-1 .553 0 1 .448 1 1v8c0 2.762-2.238 5-5 5h-1c-1.553 0-2.94-.708-3.858-1.82-.036-.028-.071-.06-.106-.092l-5.005-4.706zm4.4 5.507-.08-.072-5.005-4.706c-.902-.848-.993-2.267-.204-3.221.772-.936 2.127-1.106 3.105-.384l.753.557V4c0-1.104.896-2 2-2 .365 0 .706.097 1 .268V2c0-1.105.896-2 2-2 .873 0 1.615.559 1.888 1.338.318-.214.7-.338 1.112-.338 1.105 0 2 .895 2 2v1.268c.295-.17.636-.268 1-.268 1.105 0 2 .896 2 2v8c0 3.314-2.686 6-6 6h-1c-1.83 0-3.47-.821-4.57-2.111z"></path></svg>
+                </div>
+
+                <div id="reset-decal" class="reset-decal">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_701_80" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                        <path d="M1 29V1H29V29H1Z" fill="white" stroke="white" stroke-width="2"/>
+                        </mask>
+                        <g mask="url(#mask0_701_80)">
+                        <path d="M24.6606 13.661C25.5516 16.9973 24.6884 20.7044 22.0711 23.3217C18.9747 26.418 14.3532 27.0594 10.625 25.2458M22.955 10.0634L22.0711 9.17954C18.1659 5.27431 11.8342 5.27431 7.92893 9.17954C4.28703 12.8214 4.04145 18.5735 7.19218 22.5M22.955 10.0634H17.6516M22.955 10.0634V4.76013" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg> 
+                </div>
+
+            </div><!--content__tools-->
+            
+            <!------------------------------------------------------------------------------------->
+            <div id="render-model" class="content__render"></div><!-- renderizador do modelo 3d --> 
+            <!------------------------------------------------------------------------------------->
+
+            <!---menu-de-informações-->
+            <div class="content__menu">
+                
+                <div class="mark">
+                    <div id="mark-position" class="mark__info">
+                        <span>
+                            <b>X </b>
+                            <span id="decal-pos-x">0</span>
+                        </span>
+                        <span>
+                            <b>Y </b>
+                            <span id="decal-pos-y">0</span>
+                        </span>
+                    </div>
+                    <div id="mark-size" class="mark__info">
+                        <span decal-id="">
+                            <b>X  </b> 
+                            <input id="decal-width" type="number" value="100" min="10" max="300">
+                            <small>%</small>
+                        </span>
+                        <span decal-id="">
+                            <b>Y  </b> 
+                            <input id="decal-height" type="number" value="100" min="10" max="300"> 
+                            <small>%</small>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="markings">
+                    <p>Marcações</p>
+                    <div class="markings__group">
+                        <ul id="markings__box">
+                            
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!------------------------------------- MODAIS --------------------------------------->
+
+                <div id="modal-add-image" class="modal-add-image hide">
+                    <div class="modal-add-image__header">
+                        <p>Imagem</p>
+                        <svg id="close-modal-img" width="14" height="14" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.9523 4.99994L0.0065918 8.9457L1.06084 10L5.00659 6.05424L8.9523 10L10.0066 8.9457L6.06088 4.99994L10.0065 1.05426L8.9522 0L5.00659 3.94563L1.06096 0L0.00671076 1.05426L3.9523 4.99994Z" fill="#F1F1F1"/>
+                        </svg>  
+                    </div>
+
+                    <div class="modal-add-image__button">
+                        <label for="uploadImg">
+                            <span>Adicionar Imagem</span>
+                            <svg width="17" height="17" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.00659 7H13.0066M7.00659 1V13" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                        </label>
+                        <input type="file" name="up-img" id="uploadImg">
+                    </div>
+
+                    <div class="modal-add-image__info">
+                        <p>
+                            Para melhor qualidade adicione imagem com fundo
+                            transparente em png.
+                            Para converter acesse:
+                            <a href="http://google.com" target="_blank" rel="noopener noreferrer">
+                                ConverterImg
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div><!--content__menu-->
+
+        </div><!--content-->
+    </section><!--container-->
+    
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../build/three.module.js"
+            }
+        }
+    </script>
+    
+    <script type="module" src="./index.js"></script>
+    <!-- <script src="assets/js/menu.js"></script> -->
+    <!-- <script src="assets/js/ferramentas.js"></script> -->
+
+</body>
+</html>

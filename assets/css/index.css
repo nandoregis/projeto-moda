@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:root {
+    --color-light : #eeeeee;
+    --color-dark : #333333;
+    --bg-dark : #333333;
+    --bg-light : #f9f9f9;
+    --bg-dark-two : #404040;
+    --color-select: #494F63;
+    --header-height: 50px;
+}
+
+.text-color-dark {color: var(--color-dark);}
+.text-color-light {color: var(--color-light)}
+.bg-dark {background: var(--bg-dark);}
+.bg-light {background: var(--bg-light);}
+.bg-dark-2 {background: var(--bg-dark-two);}
+
+/*--------------------------------------------*/
+
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*-------------------*/
+.header-editor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: var(--header-height);
+    border-bottom: 1px solid #707070;
+}
+
+.select-modelo__nome {
+    padding-right: 5px;
+    text-transform: uppercase;
+}
+
+.select-modelo__box-btn {position: relative;}
+
+.select-modelo__btn {
+    display: inline-block;
+    background-color: var(--bg-light);
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+.select-modelo__menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 300px;
+    padding: 10px 0;
+    background: var(--bg-dark);
+    border-radius: 3px;
+    transition: all 0.5s;
+    z-index: 99;
+}
+
+.select-modelo__menu.show {
+    transition: all 0.5s;
+    display: block;
+}
+
+.select-modelo__menu::before {
+    position: absolute;
+    content: '';
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid var(--bg-dark);
+}
+
+.select-modelo__menu li { 
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.select-modelo__menu li:hover {
+   background-color: var(--color-select);
+}
+
+.criar-modelo {
+    cursor: pointer;
+    text-align: center;
+}
+.criar-modelo-text {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+/*---------------------------------------------------------*/
+
+.content {
+    width: 100%;
+    height: calc( 100% - var(--header-height) );
+    display: flex;
+    position: relative;
+}
+
+.content__tools {
+    padding: 10px;
+    position: absolute;
+}
+
+.content__tools > div {
+    background-color: #c0c0c0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.content__tools > div.clicked {
+    background: var(--bg-light);
+}
+
+/*-----------------------------------------------------------*/
+
+.content__render {
+    width: calc(100% - 220px);
+}
+
+.content__render.crosshair {cursor: crosshair;}
+.content__render.grab {cursor: grab;}
+.content__render.grabbing {cursor: grabbing;}
+
+.content__menu {
+    background: var(--bg-dark);
+    min-width: 220px;
+    position: relative;
+}
+
+.content__menu .mark {
+    padding: 20px;
+    border-bottom: 1px solid #5D5D5D;
+}
+
+.content__menu .mark__info {
+    display: flex;
+    padding-bottom: 25px;
+}
+
+.content__menu .mark__info span {
+    overflow: hidden;
+}
+
+.content__menu .mark__info input {
+    /* width: 40%; */
+    background-color: var(--bg-dark);
+    border: none;
+    color: var(--bg-light);
+    outline: none;
+}
+
+.content__menu .mark span {
+    display: inline-block;
+    font-size: 15px;
+    width: 50%;
+}
+.content__menu .mark span b {
+    padding-right: 5px;
+}
+
+.modal-add-image {
+    width: 200px;
+    background: var(--bg-dark);
+    position: absolute;
+    top: 11%;
+    right: 100%;
+    box-shadow: 2px 1px 10px rgb(26, 26, 26);
+}
+
+.modal-add-image.hide {
+    display: none;
+}
+
+.modal-add-image a {
+    color: rgb(138, 138, 212);
+}
+
+.modal-add-image > div {
+    padding: 15px;
+}
+
+.modal-add-image__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #5D5D5D;
+}
+
+.modal-add-image__button {
+    border-bottom: 1px solid #5D5D5D;
+}
+
+.modal-add-image__button label {
+    border: 1px solid #5D5D5D;
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.modal-add-image__button input {
+    display: none;
+}
+
+.modal-add-image__header svg {
+    cursor: pointer;
+}
+
+/*-------------------------------------------------*/
+
+.markings {padding: 10px 0;}
+
+.markings > p {
+    font-size: 18px;
+    padding: 20px 20px 10px 20px;
+}
+
+.markings__group {
+    margin-top: 10px;
+}
+
+.markings__group .marking-list {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.marking-list p:nth-of-type(1) {
+    max-width: 70%;
+    width: 70%;
+    max-height: 15px;
+    overflow: hidden;
+}
+
+.markings__group .marking-list:hover, .markings__group .marking-list.selected {
+    background-color: var(--color-select);
+}
+
+.markings__group .marking-list input {
+    display: none;
+    font-size: 15px;
+    color: var(--bg-light);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.markings__group .marking-item.dbl input {
+    display: inline-block;
+}
+.markings__group .marking-item.dbl .marking-item__description { display: none;} 
+
