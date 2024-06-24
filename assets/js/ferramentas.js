@@ -1,8 +1,12 @@
 
 export default function tools (obj) {
 
-    const { controls, decal, animate, toShareDecal } = obj;
-
+    const { 
+        controls, decal,
+        animate, toShareDecal, 
+        toShareDecalRemove, 
+        toShareTexture 
+    } = obj;
 
     const container = document.getElementById('container');
     const renderModel = document.getElementById('render-model');
@@ -26,6 +30,9 @@ export default function tools (obj) {
     const decals = [];
     var preloadDecal;
     var play = true;
+
+    toShareDecalRemove(decal.remove);
+    toShareTexture(decal.texture);
 
     const createPreloadDecal = () => {
         preloadDecal = {
@@ -90,7 +97,10 @@ export default function tools (obj) {
 
         if(!preloadDecal)  { 
             
-        } else preloadDecal._width = val; 
+        } else { 
+            preloadDecal._width = val;
+            inputWid.parentNode.setAttribute('decal-id', preloadDecal._id);
+        };
 
     });
 
@@ -102,7 +112,14 @@ export default function tools (obj) {
         val = parseInt(val);
 
         inputHeg.value = val;
-        if(preloadDecal)  preloadDecal._height = val;
+
+        if(!preloadDecal)  { 
+            
+        } else { 
+            preloadDecal._height = val;
+            inputHeg.parentNode.setAttribute('decal-id', preloadDecal._id);
+        };
+
     });
     
     resetDecal.addEventListener('click', () => {

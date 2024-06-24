@@ -1,6 +1,6 @@
 import Viewer from "../classes/Viewer.js";
 import tools from "./assets/js/ferramentas.js";
-import {toShareDecal} from "./assets/js/menu.js";
+import {toShareDecal, toShareDecalRemoveFunc, toShareDecalTextureFunc} from "./assets/js/menu.js";
 
 ( async () => {
     
@@ -11,17 +11,6 @@ import {toShareDecal} from "./assets/js/menu.js";
     
     // const hdr = view.activeHDR();
     // await hdr.load();  
-
-    console.log();
-    
-    window.addEventListener('keyup', (e) => {
-        
-        if(e.key === 'ArrowUp') {
-            modelo.applyTexture('menegotti-co-30.png');
-
-            // modelo.getMesh()[0].material.color = '#c0c0c0';
-        }
-    });
     
     view.run();
 
@@ -29,6 +18,8 @@ import {toShareDecal} from "./assets/js/menu.js";
         controls: view.getControl(),
         decal: view.getDecal(),
         toShareDecal: toShareDecal,
+        toShareDecalRemove: toShareDecalRemoveFunc,
+        toShareTexture: toShareDecalTextureFunc,
         animate: view.animate
     });
 
